@@ -8,7 +8,7 @@
         <!--Devices-->
         <scene sceneID="oD8-e1-35I">
             <objects>
-                <tableViewController storyboardIdentifier="devices" title="Devices" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RCw-hZ-fo5" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="devices" title="Devices" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RCw-hZ-fo5" customClass="DeviceTableViewController" customModule="CoreBluetoothExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ml3-63-06Z">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,6 +45,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Devices" id="9b1-j4-SeS"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="O9f-hs-hTu">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle">
+                            <fragment content="Scanning for new devices...">
+                                <attributes>
+                                    <font key="NSFont" metaFont="smallSystem"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <connections>
+                            <action selector="refreshControlAction:" destination="RCw-hZ-fo5" eventType="valueChanged" id="KQd-b9-hVB"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UO6-Wm-y4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

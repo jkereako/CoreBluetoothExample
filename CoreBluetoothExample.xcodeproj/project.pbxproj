@@ -12,6 +12,10 @@
 		366C2B571D70D6670041D68C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 366C2B561D70D6670041D68C /* Assets.xcassets */; };
 		366C2B5A1D70D6670041D68C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 366C2B581D70D6670041D68C /* LaunchScreen.storyboard */; };
 		366C2B651D70D6670041D68C /* CoreBluetoothExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C2B641D70D6670041D68C /* CoreBluetoothExampleTests.swift */; };
+		62A50C801D71D246004B93AF /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A50C7F1D71D246004B93AF /* Scanner.swift */; };
+		62E2EDA71D72355A00D0FB48 /* DeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDA61D72355A00D0FB48 /* DeviceTableViewController.swift */; };
+		62E2EDAA1D72398A00D0FB48 /* JSQDataSourcesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E2EDA91D72398A00D0FB48 /* JSQDataSourcesKit.framework */; };
+		62E2EDAD1D723A1A00D0FB48 /* DeviceCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDAC1D723A1A00D0FB48 /* DeviceCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 		366C2B601D70D6670041D68C /* CoreBluetoothExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreBluetoothExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		366C2B641D70D6670041D68C /* CoreBluetoothExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreBluetoothExampleTests.swift; sourceTree = "<group>"; };
 		366C2B661D70D6670041D68C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62A50C7F1D71D246004B93AF /* Scanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
+		62E2EDA61D72355A00D0FB48 /* DeviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewController.swift; sourceTree = "<group>"; };
+		62E2EDA91D72398A00D0FB48 /* JSQDataSourcesKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSQDataSourcesKit.framework; path = Carthage/Build/iOS/JSQDataSourcesKit.framework; sourceTree = "<group>"; };
+		62E2EDAC1D723A1A00D0FB48 /* DeviceCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E2EDAA1D72398A00D0FB48 /* JSQDataSourcesKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +66,8 @@
 		366C2B431D70D6670041D68C = {
 			isa = PBXGroup;
 			children = (
+				62E2EDAB1D72398D00D0FB48 /* Frameworks */,
+				62A50C7E1D71D235004B93AF /* Library */,
 				366C2B4D1D70D6670041D68C /* Products */,
 				366C2B701D70D6AA0041D68C /* Resources */,
 				366C2B4E1D70D6670041D68C /* Source */,
@@ -80,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				366C2B4F1D70D6670041D68C /* AppDelegate.swift */,
+				62E2EDAC1D723A1A00D0FB48 /* DeviceCellViewModel.swift */,
+				62E2EDA61D72355A00D0FB48 /* DeviceTableViewController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -111,6 +124,22 @@
 			path = SupportFiles;
 			sourceTree = "<group>";
 		};
+		62A50C7E1D71D235004B93AF /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				62A50C7F1D71D246004B93AF /* Scanner.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		62E2EDAB1D72398D00D0FB48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62E2EDA91D72398A00D0FB48 /* JSQDataSourcesKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,6 +150,7 @@
 				366C2B481D70D6670041D68C /* Sources */,
 				366C2B491D70D6670041D68C /* Frameworks */,
 				366C2B4A1D70D6670041D68C /* Resources */,
+				62E2EDA81D72384400D0FB48 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -207,11 +237,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		62E2EDA81D72384400D0FB48 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/JSQDataSourcesKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		366C2B481D70D6670041D68C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E2EDAD1D723A1A00D0FB48 /* DeviceCellViewModel.swift in Sources */,
+				62A50C801D71D246004B93AF /* Scanner.swift in Sources */,
+				62E2EDA71D72355A00D0FB48 /* DeviceTableViewController.swift in Sources */,
 				366C2B501D70D6670041D68C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +395,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexisdigital.CoreBluetoothExample;
@@ -356,6 +410,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexisdigital.CoreBluetoothExample;

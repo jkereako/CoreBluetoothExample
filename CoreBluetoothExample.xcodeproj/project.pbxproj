@@ -19,6 +19,7 @@
 		62E2EDB01D7240A300D0FB48 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDAE1D7240A300D0FB48 /* Model.xcdatamodeld */; };
 		62E2EDB21D72450600D0FB48 /* JSQCoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E2EDB11D72450600D0FB48 /* JSQCoreDataKit.framework */; };
 		62E2EDB41D7246CF00D0FB48 /* ManagedViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDB31D7246CF00D0FB48 /* ManagedViewControllerType.swift */; };
+		62E2EDBB1D724AE300D0FB48 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDB91D724AE300D0FB48 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		62E2EDAF1D7240A300D0FB48 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		62E2EDB11D72450600D0FB48 /* JSQCoreDataKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSQCoreDataKit.framework; path = Carthage/Build/iOS/JSQCoreDataKit.framework; sourceTree = "<group>"; };
 		62E2EDB31D7246CF00D0FB48 /* ManagedViewControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedViewControllerType.swift; sourceTree = "<group>"; };
+		62E2EDB91D724AE300D0FB48 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +99,10 @@
 		366C2B4E1D70D6670041D68C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				62E2EDB71D724AC600D0FB48 /* Controllers */,
+				62E2EDB61D724ABE00D0FB48 /* Models */,
 				366C2B4F1D70D6670041D68C /* AppDelegate.swift */,
 				62E2EDAC1D723A1A00D0FB48 /* DeviceCellViewModel.swift */,
-				62E2EDA61D72355A00D0FB48 /* DeviceTableViewController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -156,6 +159,22 @@
 				62E2EDB31D7246CF00D0FB48 /* ManagedViewControllerType.swift */,
 			);
 			path = Types;
+			sourceTree = "<group>";
+		};
+		62E2EDB61D724ABE00D0FB48 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				62E2EDB91D724AE300D0FB48 /* Device.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		62E2EDB71D724AC600D0FB48 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				62E2EDA61D72355A00D0FB48 /* DeviceTableViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +303,7 @@
 				62E2EDB01D7240A300D0FB48 /* Model.xcdatamodeld in Sources */,
 				62E2EDA71D72355A00D0FB48 /* DeviceTableViewController.swift in Sources */,
 				366C2B501D70D6670041D68C /* AppDelegate.swift in Sources */,
+				62E2EDBB1D724AE300D0FB48 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

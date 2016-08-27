@@ -120,7 +120,6 @@
 				366C2B581D70D6670041D68C /* LaunchScreen.storyboard */,
 				366C2B531D70D6670041D68C /* Main.storyboard */,
 				62E2EDAE1D7240A300D0FB48 /* Model.xcdatamodeld */,
-				62E2EDB31D7246CF00D0FB48 /* ManagedViewControllerType.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -136,6 +135,7 @@
 		62A50C7E1D71D235004B93AF /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				62E2EDB51D724A1800D0FB48 /* Types */,
 				62A50C7F1D71D246004B93AF /* Scanner.swift */,
 			);
 			path = Library;
@@ -148,6 +148,14 @@
 				62E2EDA91D72398A00D0FB48 /* JSQDataSourcesKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62E2EDB51D724A1800D0FB48 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				62E2EDB31D7246CF00D0FB48 /* ManagedViewControllerType.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

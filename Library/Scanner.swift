@@ -11,18 +11,19 @@ import CoreBluetooth
 
 /// Scans for devices.
 class Scanner: NSObject {
+  var delegate: ScannerDelegate?
   private let manager: CBCentralManager
-  private var peripherals: Set<CBPeripheral>
 
-  override init() {
+  override init () {
     manager = CBCentralManager(delegate: nil, queue: dispatch_get_main_queue())
-    peripherals = Set<CBPeripheral>()
 
     super.init()
 
     manager.delegate = self
   }
+}
 
+extension Scanner: CoordinatorType {
   func start() {
     let options = [CBCentralManagerScanOptionAllowDuplicatesKey: false]
 
@@ -64,10 +65,6 @@ extension Scanner: CBCentralManagerDelegate {
   func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral,
                       advertisementData: [String : AnyObject], RSSI: NSNumber) {
 
-    guard peripherals.indexOf(peripheral) == nil else {
-      return
-    }
-    
-    peripherals.insert(peripheral)
+    delegate?.found(device: peripheral)
   }
 }

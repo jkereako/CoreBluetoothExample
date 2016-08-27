@@ -43,7 +43,9 @@
                             <outlet property="delegate" destination="RCw-hZ-fo5" id="xbn-Hd-wyr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Devices" id="9b1-j4-SeS"/>
+                    <navigationItem key="navigationItem" title="Devices" id="9b1-j4-SeS">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="W1j-GQ-rr3"/>
+                    </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="O9f-hs-hTu">
                         <autoresizingMask key="autoresizingMask"/>
                         <attributedString key="attributedTitle">

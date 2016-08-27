@@ -1,5 +1,5 @@
 //
-//  ManagedViewControllerType.swift
+//  ManagedType.swift
 //  CoreBluetoothExample
 //
 //  Created by Jeff Kereakoglow on 8/27/16.
@@ -8,6 +8,6 @@
 
 import JSQCoreDataKit
 
-protocol ManagedViewControllerType {
-  var coreDataStack: CoreDataStack!  { get set }
+protocol ManagedType {
+  var coreDataStack: CoreDataStack?  { get set }
 }

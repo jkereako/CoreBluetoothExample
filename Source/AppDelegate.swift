@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Find the root view of the navigation contoller and assert it is a ManagedViewControllerType.
     guard let navController = window?.rootViewController as? UINavigationController,
-      var rootView = navController.viewControllers.first as? ManagedViewControllerType else {
+      var rootView = navController.viewControllers.first as? ManagedType else {
         fatalError("Expected a ManagedViewControllerType")
     }
 

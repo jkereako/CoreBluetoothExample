@@ -18,8 +18,11 @@
 		62E2EDAD1D723A1A00D0FB48 /* DeviceCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDAC1D723A1A00D0FB48 /* DeviceCellViewModel.swift */; };
 		62E2EDB01D7240A300D0FB48 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDAE1D7240A300D0FB48 /* Model.xcdatamodeld */; };
 		62E2EDB21D72450600D0FB48 /* JSQCoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E2EDB11D72450600D0FB48 /* JSQCoreDataKit.framework */; };
-		62E2EDB41D7246CF00D0FB48 /* ManagedViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDB31D7246CF00D0FB48 /* ManagedViewControllerType.swift */; };
+		62E2EDB41D7246CF00D0FB48 /* ManagedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDB31D7246CF00D0FB48 /* ManagedType.swift */; };
 		62E2EDBB1D724AE300D0FB48 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDB91D724AE300D0FB48 /* Device.swift */; };
+		62E2EDBD1D72514100D0FB48 /* ScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDBC1D72514100D0FB48 /* ScannerDelegate.swift */; };
+		62E2EDBF1D72523500D0FB48 /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDBE1D72523500D0FB48 /* ScannerController.swift */; };
+		62E2EDC11D72539700D0FB48 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDC01D72539700D0FB48 /* CoordinatorType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +51,11 @@
 		62E2EDAC1D723A1A00D0FB48 /* DeviceCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCellViewModel.swift; sourceTree = "<group>"; };
 		62E2EDAF1D7240A300D0FB48 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		62E2EDB11D72450600D0FB48 /* JSQCoreDataKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSQCoreDataKit.framework; path = Carthage/Build/iOS/JSQCoreDataKit.framework; sourceTree = "<group>"; };
-		62E2EDB31D7246CF00D0FB48 /* ManagedViewControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedViewControllerType.swift; sourceTree = "<group>"; };
+		62E2EDB31D7246CF00D0FB48 /* ManagedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedType.swift; sourceTree = "<group>"; };
 		62E2EDB91D724AE300D0FB48 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		62E2EDBC1D72514100D0FB48 /* ScannerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerDelegate.swift; sourceTree = "<group>"; };
+		62E2EDBE1D72523500D0FB48 /* ScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerController.swift; sourceTree = "<group>"; };
+		62E2EDC01D72539700D0FB48 /* CoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 			children = (
 				62E2EDB51D724A1800D0FB48 /* Types */,
 				62A50C7F1D71D246004B93AF /* Scanner.swift */,
+				62E2EDBC1D72514100D0FB48 /* ScannerDelegate.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -156,7 +163,8 @@
 		62E2EDB51D724A1800D0FB48 /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				62E2EDB31D7246CF00D0FB48 /* ManagedViewControllerType.swift */,
+				62E2EDC01D72539700D0FB48 /* CoordinatorType.swift */,
+				62E2EDB31D7246CF00D0FB48 /* ManagedType.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -173,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				62E2EDA61D72355A00D0FB48 /* DeviceTableViewController.swift */,
+				62E2EDBE1D72523500D0FB48 /* ScannerController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,11 +306,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62E2EDB41D7246CF00D0FB48 /* ManagedViewControllerType.swift in Sources */,
+				62E2EDB41D7246CF00D0FB48 /* ManagedType.swift in Sources */,
 				62E2EDAD1D723A1A00D0FB48 /* DeviceCellViewModel.swift in Sources */,
+				62E2EDBF1D72523500D0FB48 /* ScannerController.swift in Sources */,
 				62A50C801D71D246004B93AF /* Scanner.swift in Sources */,
+				62E2EDC11D72539700D0FB48 /* CoordinatorType.swift in Sources */,
 				62E2EDB01D7240A300D0FB48 /* Model.xcdatamodeld in Sources */,
 				62E2EDA71D72355A00D0FB48 /* DeviceTableViewController.swift in Sources */,
+				62E2EDBD1D72514100D0FB48 /* ScannerDelegate.swift in Sources */,
 				366C2B501D70D6670041D68C /* AppDelegate.swift in Sources */,
 				62E2EDBB1D724AE300D0FB48 /* Device.swift in Sources */,
 			);
@@ -365,6 +377,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -411,6 +424,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -436,6 +450,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -445,6 +461,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexisdigital.CoreBluetoothExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -452,6 +469,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -461,6 +480,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexisdigital.CoreBluetoothExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

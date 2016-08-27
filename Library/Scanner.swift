@@ -23,10 +23,10 @@ class Scanner: NSObject {
     manager.delegate = self
   }
 
-  func start(uuid uuid: CBUUID) {
+  func start() {
     let options = [CBCentralManagerScanOptionAllowDuplicatesKey: false]
 
-    manager.scanForPeripheralsWithServices([uuid], options: options)
+    manager.scanForPeripheralsWithServices(nil, options: options)
   }
 
   func stop() {

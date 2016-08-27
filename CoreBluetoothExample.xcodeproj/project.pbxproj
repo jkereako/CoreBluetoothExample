@@ -16,6 +16,9 @@
 		62E2EDA71D72355A00D0FB48 /* DeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDA61D72355A00D0FB48 /* DeviceTableViewController.swift */; };
 		62E2EDAA1D72398A00D0FB48 /* JSQDataSourcesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E2EDA91D72398A00D0FB48 /* JSQDataSourcesKit.framework */; };
 		62E2EDAD1D723A1A00D0FB48 /* DeviceCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDAC1D723A1A00D0FB48 /* DeviceCellViewModel.swift */; };
+		62E2EDB01D7240A300D0FB48 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDAE1D7240A300D0FB48 /* Model.xcdatamodeld */; };
+		62E2EDB21D72450600D0FB48 /* JSQCoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E2EDB11D72450600D0FB48 /* JSQCoreDataKit.framework */; };
+		62E2EDB41D7246CF00D0FB48 /* ManagedViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2EDB31D7246CF00D0FB48 /* ManagedViewControllerType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		62E2EDA61D72355A00D0FB48 /* DeviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewController.swift; sourceTree = "<group>"; };
 		62E2EDA91D72398A00D0FB48 /* JSQDataSourcesKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSQDataSourcesKit.framework; path = Carthage/Build/iOS/JSQDataSourcesKit.framework; sourceTree = "<group>"; };
 		62E2EDAC1D723A1A00D0FB48 /* DeviceCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCellViewModel.swift; sourceTree = "<group>"; };
+		62E2EDAF1D7240A300D0FB48 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		62E2EDB11D72450600D0FB48 /* JSQCoreDataKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSQCoreDataKit.framework; path = Carthage/Build/iOS/JSQCoreDataKit.framework; sourceTree = "<group>"; };
+		62E2EDB31D7246CF00D0FB48 /* ManagedViewControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedViewControllerType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62E2EDAA1D72398A00D0FB48 /* JSQDataSourcesKit.framework in Frameworks */,
+				62E2EDB21D72450600D0FB48 /* JSQCoreDataKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 				366C2B561D70D6670041D68C /* Assets.xcassets */,
 				366C2B581D70D6670041D68C /* LaunchScreen.storyboard */,
 				366C2B531D70D6670041D68C /* Main.storyboard */,
+				62E2EDAE1D7240A300D0FB48 /* Model.xcdatamodeld */,
+				62E2EDB31D7246CF00D0FB48 /* ManagedViewControllerType.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -135,6 +144,7 @@
 		62E2EDAB1D72398D00D0FB48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				62E2EDB11D72450600D0FB48 /* JSQCoreDataKit.framework */,
 				62E2EDA91D72398A00D0FB48 /* JSQDataSourcesKit.framework */,
 			);
 			name = Frameworks;
@@ -245,6 +255,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/JSQDataSourcesKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/JSQCoreDataKit.framework",
 			);
 			outputPaths = (
 			);
@@ -259,8 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E2EDB41D7246CF00D0FB48 /* ManagedViewControllerType.swift in Sources */,
 				62E2EDAD1D723A1A00D0FB48 /* DeviceCellViewModel.swift in Sources */,
 				62A50C801D71D246004B93AF /* Scanner.swift in Sources */,
+				62E2EDB01D7240A300D0FB48 /* Model.xcdatamodeld in Sources */,
 				62E2EDA71D72355A00D0FB48 /* DeviceTableViewController.swift in Sources */,
 				366C2B501D70D6670041D68C /* AppDelegate.swift in Sources */,
 			);
@@ -400,6 +413,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SupportFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexisdigital.CoreBluetoothExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -415,6 +429,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/SupportFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexisdigital.CoreBluetoothExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -476,6 +491,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		62E2EDAE1D7240A300D0FB48 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				62E2EDAF1D7240A300D0FB48 /* Model.xcdatamodel */,
+			);
+			currentVersion = 62E2EDAF1D7240A300D0FB48 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 366C2B441D70D6670041D68C /* Project object */;
 }

@@ -8,8 +8,15 @@
 
 import UIKit
 import JSQDataSourcesKit
+import JSQCoreDataKit
 
-class DeviceTableViewController: UITableViewController {
+class DeviceTableViewController: UITableViewController, ManagedViewControllerType {
+  var coreDataStack: CoreDataStack! {
+    didSet {
+      print("The Core Data stack is ready!")
+    }
+  }
+
   private let cellReuseIdentifier = "device"
 
   typealias CellFactory = ViewFactory<DeviceCellViewModel, UITableViewCell>
@@ -17,6 +24,7 @@ class DeviceTableViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
 
     // This is an example from Jesse Squires himself.
     

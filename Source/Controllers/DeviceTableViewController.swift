@@ -15,19 +15,20 @@ final class DeviceTableViewController: UITableViewController, ManagedType {
   var coreDataStack: CoreDataStack? {
     didSet {
       setUpTableViewDataSource()
-      scannerController.coreDataStack = coreDataStack
-      scannerController.start()
+      scannerController = ScannerController(tableView: tableView, fetchedResultsController: frc)
+      scannerController?.coreDataStack = coreDataStack
+      scannerController?.start()
     }
   }
 
   private typealias CellFactory = ViewFactory<Device, UITableViewCell>
 
-  private var scannerController = ScannerController()
+  private var scannerController: ScannerController?
   private let cellReuseIdentifier = "device"
   private var dataSourceProvider: DataSourceProvider<FetchedResultsController<Device>, CellFactory, CellFactory>!
   private var delegateProvider: FetchedResultsDelegateProvider<CellFactory>!
   private var frc: FetchedResultsController<Device>!
-
+  
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
 
@@ -98,9 +99,22 @@ private extension DeviceTableViewController {
 
 // MARK: - Interface Builder actions
 extension DeviceTableViewController {
-  @IBAction func stopButtonAction(sender: UIBarButtonItem) {
-    scannerController.stop()
-    print("Stopped scan.")
+  @IBAction func toggleScanButtonAction(sender: UIBarButtonItem) {
+    // Use the property `tag` to save state.
+    switch sender.tag {
+    case 0:
+      scannerController?.start()
+      sender.tag = 1
+      print("Scan started.")
+
+    case 1:
+      scannerController?.stop()
+      sender.tag = 0
+      print("Scan stopped.")
+
+    default:
+      sender.tag = 0
+    }
   }
 
   @IBAction func refreshControlAction(sender: UIRefreshControl) {
@@ -108,8 +122,6 @@ extension DeviceTableViewController {
     let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
 
     dispatch_after(delay, dispatch_get_main_queue()) { [unowned self] in
-      self.fetchData()
-      self.tableView.reloadData()
       self.refreshControl?.endRefreshing()
     }
   }

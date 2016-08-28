@@ -44,7 +44,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Devices" id="9b1-j4-SeS">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="W1j-GQ-rr3"/>
+                        <barButtonItem key="leftBarButtonItem" title="Toggle scan" id="W1j-GQ-rr3">
+                            <connections>
+                                <action selector="toggleScanButtonAction:" destination="RCw-hZ-fo5" id="Rc7-Xf-7nW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="O9f-hs-hTu">
                         <autoresizingMask key="autoresizingMask"/>

@@ -8,14 +8,29 @@
 
 import CoreBluetooth
 import JSQCoreDataKit
+import JSQDataSourcesKit
+import UIKit
 
 final class ScannerController: ManagedType {
   var coreDataStack: CoreDataStack?
   private let scanner: Scanner
+  private let tableView: UITableView
+  private let fetchedResultsController: FetchedResultsController<Device>
 
-  init() {
-    scanner = Scanner()
-    scanner.delegate = self
+  init(tableView: UITableView, fetchedResultsController frc: FetchedResultsController<Device>) {
+    self.scanner = Scanner()
+    self.tableView = tableView
+    self.fetchedResultsController = frc
+    self.scanner.delegate = self
+  }
+
+  private func fetchData() {
+    do {
+      try fetchedResultsController.performFetch()
+    }
+    catch {
+      print("Fetch error = \(error)")
+    }
   }
 }
 
@@ -35,5 +50,8 @@ extension ScannerController: ScannerDelegate {
     print("Found deivce \(device.name)")
     
     _ = Device(context: coreDataStack!.mainContext, name: device.name ?? "No name recorded")
+
+    fetchData()
+    tableView.reloadData()
   }
 }
